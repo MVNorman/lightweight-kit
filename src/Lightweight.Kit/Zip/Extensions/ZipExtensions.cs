@@ -26,9 +26,7 @@ namespace Lightweight.Kit.Zip.Extensions
                 }
             }
 
-            byte[] zip = memoryStream.ToArray();
-
-            return zip;
+            return memoryStream.ToArray();
         }
     }
 }
