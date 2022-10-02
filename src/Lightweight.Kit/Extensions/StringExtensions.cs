@@ -1,5 +1,5 @@
 using System.Text.RegularExpressions;
-using Lightweight.Kit.Validation.Extensions;
+using Lightweight.Kit.Validation.Validators;
 
 namespace Lightweight.Kit.Extensions
 {

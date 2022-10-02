@@ -1,8 +1,8 @@
-﻿using Lightweight.Kit.Validation.Extensions;
+﻿using Lightweight.Kit.Validation.Validators;
 
-namespace Lightweight.Kit.UnitTests.Thrower;
+namespace Lightweight.Kit.UnitTests.Validation.Validators;
 
-public class StringThrowExtensionsTests
+public class StringValidatorsTests
 {
     [Test]
     public void ThrowIfEmpty_WhenValueIsEmpty_ShouldThrow()

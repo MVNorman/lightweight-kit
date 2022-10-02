@@ -1,8 +1,8 @@
-﻿using Lightweight.Kit.Validation.Extensions;
+﻿using Lightweight.Kit.Validation.Validators;
 
-namespace Lightweight.Kit.UnitTests.Thrower;
+namespace Lightweight.Kit.UnitTests.Validation.Validators;
 
-public class GenericThrowExtensionsTests
+public class GenericValidatorsTests
 {
     [Test]
     public void ThrowIfNull_WhenValueIsNull_ShouldThrow()

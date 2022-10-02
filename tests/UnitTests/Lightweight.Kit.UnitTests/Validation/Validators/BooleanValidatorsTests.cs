@@ -1,8 +1,8 @@
-﻿using Lightweight.Kit.Validation.Extensions;
+﻿using Lightweight.Kit.Validation.Validators;
 
-namespace Lightweight.Kit.UnitTests.Thrower;
+namespace Lightweight.Kit.UnitTests.Validation.Validators;
 
-public class BooleanThrowExtensionsTests
+public class BooleanValidatorsTests
 {
     [Test]
     public void ThrowIfTrue_WhenValueIsTrue_ShouldThrow()
