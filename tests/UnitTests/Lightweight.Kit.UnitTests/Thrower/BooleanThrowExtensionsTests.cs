@@ -5,13 +5,13 @@ namespace Lightweight.Kit.UnitTests.Thrower;
 public class BooleanThrowExtensionsTests
 {
     [Test]
-    public void ThrowIfNull_WhenValueIsNull_ShouldThrow()
+    public void ThrowIfTrue_WhenValueIsTrue_ShouldThrow()
     {
-        bool? value = null;
+        const bool value = true;
 
-        TestDelegate action = () => value.ThrowIfNull();
+        void Action() => value.ThrowIfTrue();
 
-        Assert.Throws<ArgumentNullException>(action);
+        Assert.Throws<ArgumentException>(Action);
     }
 
     [Test]
@@ -19,8 +19,8 @@ public class BooleanThrowExtensionsTests
     {
         const bool value = false;
 
-        TestDelegate action = () => value.ThrowIfTrue();
+        void Action() => value.ThrowIfTrue();
 
-        Assert.DoesNotThrow(action);
+        Assert.DoesNotThrow(Action);
     }
 }
