@@ -1,21 +1,23 @@
-﻿namespace Lightweight.Kit.RailwayOriented.Extensions;
+﻿using Lightweight.Kit.RailwayOriented.Monads;
+
+namespace Lightweight.Kit.RailwayOriented.Extensions;
 
 public static class BindExtensions
 {
-    public static Railway Bind(this Railway railway, Func<Railway> action)
+    public static Monad Bind(this Monad monad, Func<Monad> action)
     {
-        return railway.IsSucceeded
+        return monad.IsSucceeded
             ? action()
-            : railway;
+            : monad;
     }
 
-    public static Railway<TU> Bind<T, TU>(this Railway<T> railway, Func<T, Railway<TU>> action)
+    public static Monad<TU> Bind<T, TU>(this Monad<T> monad, Func<T, Monad<TU>> action)
     {
-        if (railway.IsSucceeded)
+        if (monad.IsSucceeded)
         {
-            return action(railway.Value);
+            return action(monad.Value);
         }
 
-        return new Railway<TU>(railway.Exception);
+        return new Monad<TU>(monad.Exception);
     }
 }
